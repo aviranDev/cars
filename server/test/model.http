@@ -1,0 +1,38 @@
+@local = http://localhost:3900/api 
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzQ2MTRiZTE1YzE3MjIxOTNkNmQ0MTYiLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjY1NTk2MTQ3LCJleHAiOjE2NjU3Njg5NDd9.je-mEIsXzq3cZz_XuGX82VN8pjnWOVUrm3H6po64DZw
+
+POST {{local}}/models/create-model
+Content-Type: application/json
+x-auth-token: {{token}}
+
+{
+"brand": "asdasd",
+"model": "asdasdas",
+"info": "asdsadasd",
+"img": "asdasdas"
+}
+
+###
+
+GET {{local}}/models/load-data
+
+###
+
+PUT {{local}}/models/edit-model/6346fd0730cb4d7fae9c71d4
+Content-Type: application/json
+x-auth-token: {{token}}
+
+{
+"brand": "asdasd 2",
+"model": "asdasdas",
+"info": "asdsadasd",
+"img": "asdasdas"
+}
+
+###
+GET {{local}}/models/read-model/6346fd0730cb4d7fae9c71d4
+
+###
+
+DELETE {{local}}/models/remove-model/6346fd0730cb4d7fae9c71d4
+x-auth-token: {{token}}

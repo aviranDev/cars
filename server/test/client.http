@@ -1,0 +1,7 @@
+@local = http://localhost:3900/api 
+
+GET {{local}}/models/load-data
+
+
+###
+GET {{local}}/brands/load-data

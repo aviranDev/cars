@@ -1,0 +1,38 @@
+@local = http://localhost:3900/api 
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzQ2MTRiZTE1YzE3MjIxOTNkNmQ0MTYiLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjY1NTQwNTI0LCJleHAiOjE2NjU3MTMzMjR9.3-_hiUN0FvcvLVeyaF_s-j-i7ptHY6KDQb8SFzDlvvQ
+
+
+//Create Brand
+POST {{local}}/brands/create-brand
+Content-Type: application/json
+x-auth-token: {{token}}
+
+{
+  "brand": "sdsddd",
+  "img": "ddddddddd",
+  "path": "dddddd"
+}
+
+###
+
+PUT {{local}}/brands/edit-brand/633ebb577cd1289925a09400
+Content-Type: application/json
+x-auth-token: {{token}}
+
+{
+  "brand": "sadasd",
+  "img": "ddddddddd",
+  "path": "dddddd"
+}
+
+###
+GET {{local}}/brands/read-brand/634621bc2240f07fd4e64184
+
+###
+
+DELETE {{local}}/brands/remove-brand/634621bc2240f07fd4e64184
+x-auth-token: {{token}}
+
+###
+
+GET {{local}}/brands/load-data
